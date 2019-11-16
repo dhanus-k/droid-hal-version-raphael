@@ -1,5 +1,6 @@
 # These and other macros are documented in dhd/droid-hal-device.inc
 # Feel free to cleanup this file by removing comments, once you have memorised them ;)
+%define droid_target_aarch64 1
 
 %define device raphael
 %define vendor xiaomi
@@ -10,6 +11,8 @@
 %define installable_zip 1
 
 %include rpm/dhd/droid-hal-device.inc
+
+%define makefstab_skip_entries / /vendor
 
 # IMPORTANT if you want to comment out any macros in your .spec, delete the %
 # sign, otherwise they will remain defined! E.g.:
